@@ -1,0 +1,216 @@
+.addPlayerContainer {
+  text-align: center; }
+
+#playerh1 {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  padding-top: 3%;
+  font-size: 280%;
+  text-decoration: underline;
+  text-decoration-color: #de2a3f; }
+
+#attackersContainer {
+  width: 100%;
+  height: 200px;
+  display: flex; }
+
+#attackersLeftSide {
+  width: 40%; }
+
+#attackersRightSide {
+  width: 60%;
+  display: flex; }
+
+#attackersh2 {
+  font-family: "Oswald", sans-serif;
+  color: #de2a3f;
+  font-weight: 700;
+  font-size: 250%;
+  margin-bottom: 0; }
+
+#attackersh3 {
+  font-family: "Oswald", sans-serif;
+  color: #de2a3f;
+  font-weight: 700;
+  font-size: 150%;
+  margin: 0 0 10px 0; }
+
+#attackersRoundsWonInput {
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  background-color: #202935;
+  border: 2px #de2a3f solid;
+  border-radius: 10%;
+  color: #de2a3f; }
+
+.attackerMissing {
+  color: #de2a3f;
+  font-family: "Oswald", sans-serif;
+  font-size: 150%;
+  margin: 30px; }
+
+#attackerPlayer1 {
+  width: 100px;
+  height: 100px;
+  margin: 50px 20px 0 0;
+  border: 7px #de2a3f solid;
+  border-radius: 50%;
+  cursor: pointer; }
+  #attackerPlayer1:hover {
+    border-color: white; }
+    #attackerPlayer1:hover p {
+      color: white; }
+
+#attackerPlayer2 {
+  width: 100px;
+  height: 100px;
+  margin: 50px 20px 0 0;
+  border: 7px #de2a3f solid;
+  border-radius: 50%;
+  cursor: pointer; }
+  #attackerPlayer2:hover {
+    border-color: white; }
+    #attackerPlayer2:hover p {
+      color: white; }
+
+#attackerPlayer3 {
+  width: 100px;
+  height: 100px;
+  margin: 50px 20px 0 0;
+  border: 7px #de2a3f solid;
+  border-radius: 50%;
+  cursor: pointer; }
+  #attackerPlayer3:hover {
+    border-color: white; }
+    #attackerPlayer3:hover p {
+      color: white; }
+
+#attackerPlayer4 {
+  width: 100px;
+  height: 100px;
+  margin: 50px 20px 0 0;
+  border: 7px #de2a3f solid;
+  border-radius: 50%;
+  cursor: pointer; }
+  #attackerPlayer4:hover {
+    border-color: white; }
+    #attackerPlayer4:hover p {
+      color: white; }
+
+#attackerPlayer5 {
+  width: 100px;
+  height: 100px;
+  margin: 50px 20px 0 0;
+  border: 7px #de2a3f solid;
+  border-radius: 50%;
+  cursor: pointer; }
+  #attackerPlayer5:hover {
+    border-color: white; }
+    #attackerPlayer5:hover p {
+      color: white; }
+
+#defendersContainer {
+  width: 100%;
+  height: 300px;
+  display: flex; }
+
+#defendersLeftSide {
+  width: 40%; }
+
+#defendersRightSide {
+  width: 60%;
+  display: flex; }
+
+#defendersh2 {
+  font-family: "Oswald", sans-serif;
+  color: #63a4ff;
+  font-weight: 700;
+  font-size: 250%;
+  margin-bottom: 0; }
+
+#defendersh3 {
+  font-family: "Oswald", sans-serif;
+  color: #63a4ff;
+  font-weight: 700;
+  font-size: 150%;
+  margin: 0 0 10px 0; }
+
+#defendersRoundsWonInput {
+  width: 80px;
+  height: 30px;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  background-color: #202935;
+  border: 2px #63a4ff solid;
+  border-radius: 10%;
+  color: #63a4ff; }
+
+.defenderMissing {
+  color: #63a4ff;
+  font-family: "Oswald", sans-serif;
+  font-size: 150%;
+  margin: 30px; }
+
+#defenderPlayer1 {
+  width: 100px;
+  height: 100px;
+  margin: 50px 20px 0 0;
+  border: 7px #63a4ff solid;
+  border-radius: 50%;
+  cursor: pointer; }
+  #defenderPlayer1:hover {
+    border-color: white; }
+    #defenderPlayer1:hover p {
+      color: white; }
+
+#defenderPlayer2 {
+  width: 100px;
+  height: 100px;
+  margin: 50px 20px 0 0;
+  border: 7px #63a4ff solid;
+  border-radius: 50%;
+  cursor: pointer; }
+  #defenderPlayer2:hover {
+    border-color: white; }
+    #defenderPlayer2:hover p {
+      color: white; }
+
+#defenderPlayer3 {
+  width: 100px;
+  height: 100px;
+  margin: 50px 20px 0 0;
+  border: 7px #63a4ff solid;
+  border-radius: 50%;
+  cursor: pointer; }
+  #defenderPlayer3:hover {
+    border-color: white; }
+    #defenderPlayer3:hover p {
+      color: white; }
+
+#defenderPlayer4 {
+  width: 100px;
+  height: 100px;
+  margin: 50px 20px 0 0;
+  border: 7px #63a4ff solid;
+  border-radius: 50%;
+  cursor: pointer; }
+  #defenderPlayer4:hover {
+    border-color: white; }
+    #defenderPlayer4:hover p {
+      color: white; }
+
+#defenderPlayer5 {
+  width: 100px;
+  height: 100px;
+  margin: 50px 20px 0 0;
+  border: 7px #63a4ff solid;
+  border-radius: 50%;
+  cursor: pointer; }
+  #defenderPlayer5:hover {
+    border-color: white; }
+    #defenderPlayer5:hover p {
+      color: white; }
+
+/*# sourceMappingURL=AddPlayer.css.map */
