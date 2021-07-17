@@ -1,0 +1,105 @@
+$oswald: 'Oswald', sans-serif;
+$valoRed: #de2a3f;
+$valoBlue: #63a4ff;
+
+@mixin playerInputs() {
+	margin-bottom: 10px;
+	height: 40px;
+	width: 70%;
+	margin-left: 10%;
+	font-family: $oswald;
+	font-size: 18px;
+	color: #424242;
+	text-align: center;
+	&:focus-visible {
+		outline: none;
+	}
+}
+
+#addPlayerh1 {
+	color: white;
+	font-family: $oswald;
+	font-size: 60px;
+    padding: 0 0 0 80px;
+    margin-bottom: 0;
+}
+
+#playerTypeh2 {
+	color: $valoRed;
+	font-family: $oswald;
+	font-size: 50px;
+    margin: -25px 0 0 80px;
+}
+
+#addPlayerHeader {
+	width: 100%;
+	height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#addPlayerHeaderLeft{
+	width: 40%;
+	height: 100%;
+}
+
+#addPlayerHeaderRight {
+	height: 100%;
+	width: 60%;
+}
+
+#playerNameInput {
+	@include playerInputs();
+    margin-top: 60px;
+}
+
+#playerTagInput {
+	@include playerInputs();
+}
+
+::placeholder {
+	font-family: $oswald;
+	color: #bdbdbd;
+
+}
+
+#chooseAgentContainer {
+	width: 100%;
+	height: 230px;
+    display: flex;
+}
+
+#chooseAgentLeft {
+	width: 40%;
+	height: 100%;
+}
+
+#chooseAgentRight {
+	width: 60%;
+	height: 100%;
+}
+
+#selectAgenth2 {
+	color: white;
+	font-family: $oswald;
+	font-size: 20px;
+	margin-bottom: 0;
+	margin-top: 40px;
+}
+
+#selectedAgent {
+	border: 5px white solid;
+	border-radius: 50%;
+	margin-left: 25%;
+	width: 55%;
+}
+
+.agentOptions {
+	width: 10%;
+	margin: 2px;
+	cursor: pointer;
+	&:hover {
+		background-color: #ffffff3b;
+	}
+}

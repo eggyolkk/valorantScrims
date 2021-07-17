@@ -1,3 +1,10 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -5%, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
 .addPlayerContainer {
   text-align: center; }
 
@@ -5,21 +12,25 @@
   color: white;
   font-family: "Oswald", sans-serif;
   padding-top: 3%;
-  font-size: 280%;
+  font-size: 400%;
   text-decoration: underline;
   text-decoration-color: #de2a3f; }
 
 #attackersContainer {
   width: 100%;
-  height: 200px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+#attackersRoundsContainer {
   display: flex; }
 
-#attackersLeftSide {
-  width: 40%; }
-
-#attackersRightSide {
-  width: 60%;
+#attackersCards {
   display: flex; }
+
+.playerCard {
+  width: 100%; }
 
 #attackersh2 {
   font-family: "Oswald", sans-serif;
@@ -48,64 +59,74 @@
 .attackerMissing {
   color: #de2a3f;
   font-family: "Oswald", sans-serif;
-  font-size: 150%;
-  margin: 30px; }
+  font-size: 400%;
+  margin-top: 150px; }
 
 #attackerPlayer1 {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 373px;
   margin: 50px 20px 0 0;
   border: 7px #de2a3f solid;
-  border-radius: 50%;
-  cursor: pointer; }
+  border-radius: 2%;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in both;
+  animation-delay: 1s; }
   #attackerPlayer1:hover {
     border-color: white; }
     #attackerPlayer1:hover p {
       color: white; }
 
 #attackerPlayer2 {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 373px;
   margin: 50px 20px 0 0;
   border: 7px #de2a3f solid;
-  border-radius: 50%;
-  cursor: pointer; }
+  border-radius: 2%;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in both;
+  animation-delay: 1.5s; }
   #attackerPlayer2:hover {
     border-color: white; }
     #attackerPlayer2:hover p {
       color: white; }
 
 #attackerPlayer3 {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 373px;
   margin: 50px 20px 0 0;
   border: 7px #de2a3f solid;
-  border-radius: 50%;
-  cursor: pointer; }
+  border-radius: 2%;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in both;
+  animation-delay: 2s; }
   #attackerPlayer3:hover {
     border-color: white; }
     #attackerPlayer3:hover p {
       color: white; }
 
 #attackerPlayer4 {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 373px;
   margin: 50px 20px 0 0;
   border: 7px #de2a3f solid;
-  border-radius: 50%;
-  cursor: pointer; }
+  border-radius: 2%;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in both;
+  animation-delay: 2.5s; }
   #attackerPlayer4:hover {
     border-color: white; }
     #attackerPlayer4:hover p {
       color: white; }
 
 #attackerPlayer5 {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 373px;
   margin: 50px 20px 0 0;
   border: 7px #de2a3f solid;
-  border-radius: 50%;
-  cursor: pointer; }
+  border-radius: 2%;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in both;
+  animation-delay: 3s; }
   #attackerPlayer5:hover {
     border-color: white; }
     #attackerPlayer5:hover p {
@@ -113,14 +134,12 @@
 
 #defendersContainer {
   width: 100%;
-  height: 300px;
-  display: flex; }
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
-#defendersLeftSide {
-  width: 40%; }
-
-#defendersRightSide {
-  width: 60%;
+#defendersCards {
   display: flex; }
 
 #defendersh2 {
@@ -150,67 +169,94 @@
 .defenderMissing {
   color: #63a4ff;
   font-family: "Oswald", sans-serif;
-  font-size: 150%;
-  margin: 30px; }
+  font-size: 400%;
+  margin-top: 150px; }
 
 #defenderPlayer1 {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 373px;
   margin: 50px 20px 0 0;
   border: 7px #63a4ff solid;
-  border-radius: 50%;
-  cursor: pointer; }
+  border-radius: 2%;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in both;
+  animation-delay: 1s; }
   #defenderPlayer1:hover {
     border-color: white; }
     #defenderPlayer1:hover p {
       color: white; }
 
 #defenderPlayer2 {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 373px;
   margin: 50px 20px 0 0;
   border: 7px #63a4ff solid;
-  border-radius: 50%;
-  cursor: pointer; }
+  border-radius: 2%;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in both;
+  animation-delay: 1.5s; }
   #defenderPlayer2:hover {
     border-color: white; }
     #defenderPlayer2:hover p {
       color: white; }
 
 #defenderPlayer3 {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 373px;
   margin: 50px 20px 0 0;
   border: 7px #63a4ff solid;
-  border-radius: 50%;
-  cursor: pointer; }
+  border-radius: 2%;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in both;
+  animation-delay: 2s; }
   #defenderPlayer3:hover {
     border-color: white; }
     #defenderPlayer3:hover p {
       color: white; }
 
 #defenderPlayer4 {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 373px;
   margin: 50px 20px 0 0;
   border: 7px #63a4ff solid;
-  border-radius: 50%;
-  cursor: pointer; }
+  border-radius: 2%;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in both;
+  animation-delay: 2.5s; }
   #defenderPlayer4:hover {
     border-color: white; }
     #defenderPlayer4:hover p {
       color: white; }
 
 #defenderPlayer5 {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 373px;
   margin: 50px 20px 0 0;
   border: 7px #63a4ff solid;
-  border-radius: 50%;
-  cursor: pointer; }
+  border-radius: 2%;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in both;
+  animation-delay: 3s; }
   #defenderPlayer5:hover {
     border-color: white; }
     #defenderPlayer5:hover p {
       color: white; }
+
+.modal {
+  background-color: #0c0f1c;
+  width: 60%;
+  height: 85%;
+  margin: auto;
+  animation: fadeIn 0.6s ease-in both;
+  border: 1px white solid;
+  border-radius: 1%;
+  margin-top: 50px;
+  overflow-y: auto; }
+
+.modal:focus-visible {
+  border: none; }
+
+#closeModalButton {
+  float: right; }
 
 /*# sourceMappingURL=AddPlayer.css.map */

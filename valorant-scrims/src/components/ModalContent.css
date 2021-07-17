@@ -1,0 +1,91 @@
+#addPlayerh1 {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 60px;
+  padding: 0 0 0 80px;
+  margin-bottom: 0; }
+
+#playerTypeh2 {
+  color: #de2a3f;
+  font-family: "Oswald", sans-serif;
+  font-size: 50px;
+  margin: -25px 0 0 80px; }
+
+#addPlayerHeader {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; }
+
+#addPlayerHeaderLeft {
+  width: 40%;
+  height: 100%; }
+
+#addPlayerHeaderRight {
+  height: 100%;
+  width: 60%; }
+
+#playerNameInput {
+  margin-bottom: 10px;
+  height: 40px;
+  width: 70%;
+  margin-left: 10%;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  color: #424242;
+  text-align: center;
+  margin-top: 60px; }
+  #playerNameInput:focus-visible {
+    outline: none; }
+
+#playerTagInput {
+  margin-bottom: 10px;
+  height: 40px;
+  width: 70%;
+  margin-left: 10%;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  color: #424242;
+  text-align: center; }
+  #playerTagInput:focus-visible {
+    outline: none; }
+
+::placeholder {
+  font-family: "Oswald", sans-serif;
+  color: #bdbdbd; }
+
+#chooseAgentContainer {
+  width: 100%;
+  height: 230px;
+  display: flex; }
+
+#chooseAgentLeft {
+  width: 40%;
+  height: 100%; }
+
+#chooseAgentRight {
+  width: 60%;
+  height: 100%; }
+
+#selectAgenth2 {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  margin-bottom: 0;
+  margin-top: 40px; }
+
+#selectedAgent {
+  border: 5px white solid;
+  border-radius: 50%;
+  margin-left: 25%;
+  width: 55%; }
+
+.agentOptions {
+  width: 10%;
+  margin: 2px;
+  cursor: pointer; }
+  .agentOptions:hover {
+    background-color: #ffffff3b; }
+
+/*# sourceMappingURL=ModalContent.css.map */

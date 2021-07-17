@@ -8,18 +8,30 @@ $valoBlue: #63a4ff;
     font-weight: 700;
 }
 
-@mixin playerCircles($circleColor) {
-    width: 100px;
-    height: 100px;
+@mixin playerCards($borderColor) {
+    width: 250px;
+    height: 373px;
     margin: 50px 20px 0 0;
-    border: 7px $circleColor solid;
-    border-radius: 50%;
+    border: 7px $borderColor solid;
+    border-radius: 2%;
     cursor: pointer;
+    animation: fadeIn 1s ease-in both;
     &:hover {
         border-color: white;
         p {
             color: white;
         }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -5%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
     }
 }
 
@@ -37,8 +49,8 @@ $valoBlue: #63a4ff;
 @mixin missing($circleColor) {
     color: $circleColor;
     font-family: $oswald;
-    font-size: 150%;
-    margin: 30px;
+    font-size: 400%;
+    margin-top: 150px;
 }
 
 .addPlayerContainer {
@@ -49,24 +61,30 @@ $valoBlue: #63a4ff;
     color: white;
     font-family: "Oswald", sans-serif;
     padding-top: 3%;
-    font-size: 280%;
+    font-size: 400%;
     text-decoration: underline;
     text-decoration-color: $valoRed;
 }
 
 #attackersContainer {
     width: 100%;
-    height: 200px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#attackersRoundsContainer {
     display: flex;
 }
 
-#attackersLeftSide {
-    width: 40%;
+#attackersCards {
+    display: flex;
 }
 
-#attackersRightSide {
-    width: 60%;
-    display: flex;
+
+.playerCard{
+    width: 100%;
 }
 
 #attackersh2 {
@@ -91,37 +109,40 @@ $valoBlue: #63a4ff;
 
 
 #attackerPlayer1 {
-    @include playerCircles($valoRed);
+    @include playerCards($valoRed);
+    animation-delay: 1s;
 }
 
 #attackerPlayer2 {
-    @include playerCircles($valoRed);
+    @include playerCards($valoRed);
+    animation-delay: 1.5s;
 }
 
 #attackerPlayer3 {
-    @include playerCircles($valoRed);
+    @include playerCards($valoRed);
+    animation-delay: 2s;
 }
 
 #attackerPlayer4 {
-    @include playerCircles($valoRed);
+    @include playerCards($valoRed);
+    animation-delay: 2.5s;
 }
 
 #attackerPlayer5 {
-    @include playerCircles($valoRed);
+    @include playerCards($valoRed);
+    animation-delay: 3s;
 }
 
 #defendersContainer {
     width: 100%;
-    height: 300px;
+    height: 700px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#defendersLeftSide {
-    width: 40%;
-}
 
-#defendersRightSide {
-    width: 60%;
+#defendersCards {
     display: flex;
 }
 
@@ -146,21 +167,46 @@ $valoBlue: #63a4ff;
 }
 
 #defenderPlayer1 {
-    @include playerCircles($valoBlue);
+    @include playerCards($valoBlue);
+    animation-delay: 1s;
 }
 
 #defenderPlayer2 {
-    @include playerCircles($valoBlue);
+    @include playerCards($valoBlue);
+    animation-delay: 1.5s;
 }
 
 #defenderPlayer3 {
-    @include playerCircles($valoBlue);
+    @include playerCards($valoBlue);
+    animation-delay: 2s;
 }
 
 #defenderPlayer4 {
-    @include playerCircles($valoBlue);
+    @include playerCards($valoBlue);
+    animation-delay: 2.5s;
 }
 
 #defenderPlayer5 {
-    @include playerCircles($valoBlue);
+    @include playerCards($valoBlue);
+    animation-delay: 3s;
+}
+
+.modal {
+    background-color: #0c0f1c;
+    width: 60%;
+    height: 85%;
+    margin: auto;
+    animation: fadeIn 0.6s ease-in both;
+    border: 1px white solid;
+    border-radius: 1%;
+    margin-top: 50px;
+    overflow-y: auto;
+}
+
+.modal:focus-visible{
+    border: none;
+}
+
+#closeModalButton {
+    float: right;
 }
