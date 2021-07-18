@@ -27,7 +27,8 @@
   display: flex; }
 
 #attackersCards {
-  display: flex; }
+  display: flex;
+  padding-bottom: 150px; }
 
 .playerCard {
   width: 100%; }
@@ -64,7 +65,7 @@
 
 #attackerPlayer1 {
   width: 250px;
-  height: 373px;
+  height: 366px;
   margin: 50px 20px 0 0;
   border: 7px #de2a3f solid;
   border-radius: 2%;
@@ -78,7 +79,7 @@
 
 #attackerPlayer2 {
   width: 250px;
-  height: 373px;
+  height: 366px;
   margin: 50px 20px 0 0;
   border: 7px #de2a3f solid;
   border-radius: 2%;
@@ -92,7 +93,7 @@
 
 #attackerPlayer3 {
   width: 250px;
-  height: 373px;
+  height: 366px;
   margin: 50px 20px 0 0;
   border: 7px #de2a3f solid;
   border-radius: 2%;
@@ -106,7 +107,7 @@
 
 #attackerPlayer4 {
   width: 250px;
-  height: 373px;
+  height: 366px;
   margin: 50px 20px 0 0;
   border: 7px #de2a3f solid;
   border-radius: 2%;
@@ -120,7 +121,7 @@
 
 #attackerPlayer5 {
   width: 250px;
-  height: 373px;
+  height: 366px;
   margin: 50px 20px 0 0;
   border: 7px #de2a3f solid;
   border-radius: 2%;
@@ -174,7 +175,7 @@
 
 #defenderPlayer1 {
   width: 250px;
-  height: 373px;
+  height: 366px;
   margin: 50px 20px 0 0;
   border: 7px #63a4ff solid;
   border-radius: 2%;
@@ -188,7 +189,7 @@
 
 #defenderPlayer2 {
   width: 250px;
-  height: 373px;
+  height: 366px;
   margin: 50px 20px 0 0;
   border: 7px #63a4ff solid;
   border-radius: 2%;
@@ -202,7 +203,7 @@
 
 #defenderPlayer3 {
   width: 250px;
-  height: 373px;
+  height: 366px;
   margin: 50px 20px 0 0;
   border: 7px #63a4ff solid;
   border-radius: 2%;
@@ -216,7 +217,7 @@
 
 #defenderPlayer4 {
   width: 250px;
-  height: 373px;
+  height: 366px;
   margin: 50px 20px 0 0;
   border: 7px #63a4ff solid;
   border-radius: 2%;
@@ -230,7 +231,7 @@
 
 #defenderPlayer5 {
   width: 250px;
-  height: 373px;
+  height: 366px;
   margin: 50px 20px 0 0;
   border: 7px #63a4ff solid;
   border-radius: 2%;
@@ -258,5 +259,14 @@
 
 #closeModalButton {
   float: right; }
+
+.playerDetails {
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 500; }
+
+.playerCardNew {
+  margin-top: -200px; }
 
 /*# sourceMappingURL=AddPlayer.css.map */

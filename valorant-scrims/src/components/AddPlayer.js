@@ -15,10 +15,9 @@ class AddPlayer extends Component {
       showModal: false,
       modalPlayerType: '',
       attackerPlayerCard: 'attackerPlayerCard.JPG',
-      playerName: '',
-      playerTag: '',
-      currentPlayerNum: 0,
-      attackerPlayer1: []
+      players: [],
+      existingPlayers: [],
+      currentPlayerNum: 0
     }
   }
 
@@ -34,11 +33,10 @@ class AddPlayer extends Component {
     })
   }
 
-
   handleShowAttacker = e => {
     this.setState({
       showModal: true,
-      currentPlayerNum: e.target.getAttribute('mycustomattribute'), //trying to get the number of the player card to be set to "currentPlayerNum"
+      currentPlayerNum: e.target.getAttribute('num'), //trying to get the number of the player card to be set to "currentPlayerNum"
       modalPlayerType: 'ATTACKER'
     })
   }
@@ -49,18 +47,34 @@ class AddPlayer extends Component {
     })
   }
 
-  setPlayerDetails = (name, tag) => {
+  setPlayerDetails = (name, tag, agent) => {
+    const num = this.state.currentPlayerNum
+    const player = `player${num}`
+    const playerListCopy = [...this.state.players]
+    const existingPlayerListCopy = [...this.state.existingPlayers]
+
+    playerListCopy.push({id: num, name: name, tag: tag, agent: agent})
+    existingPlayerListCopy.push(num.toString())
+
     this.setState({
-      playerName: name,
-      playerTag: tag
+      attackerPlayerCard: agent + ".png",
+      players: playerListCopy,
+      existingPlayers: existingPlayerListCopy
     })
+
+    for (var i in playerListCopy){
+      if (parseInt(this.state.currentPlayerNum) === parseInt(playerListCopy[i].id)) {
+        const currentPlayerListCopy = [{id: playerListCopy[i].id, name: playerListCopy[i].name, tag: playerListCopy[i].tag, agent: playerListCopy[i].agent}]
+        this.setState({
+          [player]: currentPlayerListCopy
+        })
+      }
+    }
   }
 
   render() {
-    const show = this.state.showModal
-    const playerType = this.state.modalPlayerType
-    const card = this.state.attackerPlayerCard
-    const aplayerCard = require(`../images/${card}`).default;
+    const show = this.state.showModal //true or false boolean
+    const playerType = this.state.modalPlayerType //'attacker' or 'defender' player (shows up in modal window)
 
     return (
       <div className="addPlayerContainer">
@@ -77,20 +91,60 @@ class AddPlayer extends Component {
               >
               </input>
 
-          <div id="attackersCards">
-            <div id="attackerPlayer1" onClick={this.handleShowAttacker} mycustomattribute={1}><img className="playerCard" src={attackerPlayerCard} alt='Player Card' />
-            <h1 id="player1Details">{this.state.playerName}{this.state.currentPlayerNum} </h1>
+            <div id="attackersCards">
+              <div id="attackerPlayer1">
+
+              {this.state.existingPlayers.includes('1') ? (
+                this.state.player1.map((player, key) => {
+                  return <div>
+                    <img className="playerCard" onClick={this.handleShowAttacker} src={require(`../images/${player.agent}banner.jpg`).default} alt='Player Card' num={1} />
+                      <h1 className="playerDetails" key={player.id}>{player.name} #{player.tag}</h1>
+                  </div>
+                })
+              ) : <img className="playerCard" onClick={this.handleShowAttacker} src={attackerPlayerCard} alt='Player Card' num={1} />}
             </div>
 
-            <div id="attackerPlayer2"><img className="playerCard" src={aplayerCard} alt='Player Card' />
-            <h1 id="player1Details">{this.state.playerName}</h1>
+            <div id="attackerPlayer2">
+              {this.state.existingPlayers.includes('2') ? (
+                this.state.player2.map((player, key) => {
+                  return <div>
+                    <img className="playerCard" onClick={this.handleShowAttacker} src={require(`../images/${player.agent}banner.jpg`).default} alt='Player Card' num={2} />
+                      <h1 className="playerDetails" key={player.id}>{player.name} #{player.tag}</h1>
+                  </div>
+                })
+              ) : <img className="playerCard" onClick={this.handleShowAttacker} src={attackerPlayerCard} alt='Player Card' num={2} />}
             </div>
 
-            <div id="attackerPlayer3"><img className="playerCard" src={attackerPlayerCard} alt='Player Card' /></div>
-            <div id="attackerPlayer4"><img className="playerCard" src={attackerPlayerCard} alt='Player Card' /></div>
-            <div id="attackerPlayer5"><img className="playerCard" src={attackerPlayerCard} alt='Player Card' /></div>
+            <div id="attackerPlayer3">{this.state.existingPlayers.includes('3') ? (
+              this.state.player3.map((player, key) => {
+                return <div>
+                  <img className="playerCard" onClick={this.handleShowAttacker} src={require(`../images/${player.agent}banner.jpg`).default} alt='Player Card' num={3} />
+                    <h1 className="playerDetails" key={player.id}>{player.name} #{player.tag}</h1>
+                </div>
+              })
+            ) : <img className="playerCard" onClick={this.handleShowAttacker} src={attackerPlayerCard} alt='Player Card' num={3} />}
+            </div>
+
+            <div id="attackerPlayer4">{this.state.existingPlayers.includes('4') ? (
+              this.state.player4.map((player, key) => {
+                return <div>
+                  <img className="playerCard" onClick={this.handleShowAttacker} src={require(`../images/${player.agent}banner.jpg`).default} alt='Player Card' num={4} />
+                    <h1 className="playerDetails" key={player.id}>{player.name} #{player.tag}</h1>
+                </div>
+              })
+            ) : <img className="playerCard" onClick={this.handleShowAttacker} src={attackerPlayerCard} alt='Player Card' num={4} />}
           </div>
 
+            <div id="attackerPlayer5">
+              {this.state.existingPlayers.includes('5') ? (
+                this.state.player5.map((player, key) => {
+                  return <div>
+                    <img className="playerCard" onClick={this.handleShowAttacker} src={require(`../images/${player.agent}banner.jpg`).default} alt='Player Card' num={5} />
+                      <h1 className="playerDetails" key={player.id}>{player.name} #{player.tag}</h1>
+                  </div>
+                })
+              ) : <img className="playerCard" onClick={this.handleShowAttacker} src={attackerPlayerCard} alt='Player Card' num={5} />}
+          </div>
         </div>
 
         <div id="defendersContainer">
@@ -120,6 +174,7 @@ class AddPlayer extends Component {
             </Modal>
         </div>
       </div>
+    </div>
     )
   }
 }

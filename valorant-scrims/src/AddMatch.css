@@ -1,18 +1,7 @@
 body {
-  background-color: #0c0f1c; }
+  background-color: #0c0f1c !important; }
 
 #bannerImage {
   width: 100%; }
-
-.addPlayerContainer {
-  text-align: center; }
-
-#playerh1 {
-  color: white;
-  font-family: "Oswald", sans-serif;
-  padding-top: 3%;
-  font-size: 250%;
-  text-decoration: underline;
-  text-decoration-color: #de2a3f; }
 
 /*# sourceMappingURL=AddMatch.css.map */

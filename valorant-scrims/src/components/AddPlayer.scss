@@ -10,7 +10,7 @@ $valoBlue: #63a4ff;
 
 @mixin playerCards($borderColor) {
     width: 250px;
-    height: 373px;
+    height: 366px;
     margin: 50px 20px 0 0;
     border: 7px $borderColor solid;
     border-radius: 2%;
@@ -80,8 +80,8 @@ $valoBlue: #63a4ff;
 
 #attackersCards {
     display: flex;
+    padding-bottom: 150px;
 }
-
 
 .playerCard{
     width: 100%;
@@ -106,7 +106,6 @@ $valoBlue: #63a4ff;
 .attackerMissing {
     @include missing($valoRed);
 }
-
 
 #attackerPlayer1 {
     @include playerCards($valoRed);
@@ -209,4 +208,15 @@ $valoBlue: #63a4ff;
 
 #closeModalButton {
     float: right;
+}
+
+.playerDetails {
+    color: white;
+    font-family: $oswald;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.playerCardNew {
+    margin-top: -200px;
 }

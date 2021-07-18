@@ -2,14 +2,14 @@
   color: white;
   font-family: "Oswald", sans-serif;
   font-size: 60px;
-  padding: 0 0 0 80px;
+  padding: 25px 0 0 80px;
   margin-bottom: 0; }
 
 #playerTypeh2 {
   color: #de2a3f;
   font-family: "Oswald", sans-serif;
   font-size: 50px;
-  margin: -25px 0 0 80px; }
+  margin: -5px 0 0 80px; }
 
 #addPlayerHeader {
   width: 100%;
@@ -87,5 +87,36 @@
   cursor: pointer; }
   .agentOptions:hover {
     background-color: #ffffff3b; }
+
+#chooseRankContainer {
+  width: 100%;
+  height: 230px;
+  display: flex; }
+
+#chooseRankLeft {
+  width: 40%;
+  height: 100%; }
+
+#chooseRankRight {
+  width: 60%;
+  height: 100%; }
+
+.rankDropdown {
+  color: white !important;
+  width: 200px;
+  margin: 5px 0 0 18px !important;
+  font-family: "Oswald", sans-serif !important;
+  font-weight: 500 !important; }
+
+#silvertry {
+  width: 80px; }
+
+#silverContainer {
+  display: flex;
+  height: 80px;
+  width: 150px;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column; }
 
 /*# sourceMappingURL=ModalContent.css.map */

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './ModalContent.css';
+import { Dropdown } from "semantic-ui-react";
 import astra from '../images/astra.png'
 import breach from '../images/breach.png'
 import brimstone from '../images/brimstone.png'
@@ -25,7 +26,27 @@ class ModalContent extends Component {
     this.state = {
       playerName: '',
       playerTag: '',
-      agent: 'astra'
+      agent: 'astra',
+      ranks: [
+        {
+          key: 'Silver 1',
+          text: 'SILVER I',
+          value: 'Silver 1',
+          image: {avatar: true, src: require('../images/silver1.png').default}
+        },
+        {
+          key: 'Silver 2',
+          text: 'SILVER II',
+          value: 'Silver 2',
+          image: {avatar: true, src: require('../images/silver2.png').default}
+        },
+        {
+          key: 'Silver 3',
+          text: 'SILVER III',
+          value: 'Silver 3',
+          image: {avatar: true, src: require('../images/silver3.png').default}
+        }
+      ]
     }
   }
 
@@ -49,7 +70,7 @@ class ModalContent extends Component {
 
   submit = () => {
     this.props.handleClose()
-    this.props.setPlayerDetails(this.state.playerName, this.state.playerTag)
+    this.props.setPlayerDetails(this.state.playerName, this.state.playerTag, this.state.agent)
   }
 
   render() {
@@ -111,7 +132,31 @@ class ModalContent extends Component {
           </div>
         </div>
 
+        <div id="chooseRankContainer">
+          <div id="chooseRankLeft">
+            <img src={require(`../images/gold1.png`).default} alt='Player Card'/>
+          </div>
 
+          <div id="chooseRankRight">
+          <div id="silverContainer">
+            <img src={require(`../images/silver1.png`).default} alt="Silver" id="silvertry" />
+              <Dropdown
+                text='SILVER'
+                floating
+                labeled
+                button
+                src={require(`../images/silver1.png`).default}
+                className="rankDropdown"
+              >
+              <Dropdown.Menu>
+                {this.state.ranks.map((option) => (
+                  <Dropdown.Item key={option.value} {...option} />
+                ))}
+              </Dropdown.Menu>
+            </Dropdown>
+            </div>
+          </div>
+        </div>
 
         <button id="closeModalButton" onClick={this.submit}>ADD PLAYER</button>
       </React.Fragment>
