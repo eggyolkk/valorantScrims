@@ -1,26 +1,29 @@
 #addPlayerh1 {
   color: white;
   font-family: "Oswald", sans-serif;
-  font-size: 60px;
-  padding: 25px 0 0 80px;
+  font-size: 350%;
   margin-bottom: 0; }
 
 #playerTypeh2 {
   color: #de2a3f;
   font-family: "Oswald", sans-serif;
-  font-size: 50px;
-  margin: -5px 0 0 80px; }
+  font-size: 450%;
+  margin-top: -5px; }
 
 #addPlayerHeader {
   width: 100%;
-  height: 200px;
+  height: 25%;
   display: flex;
   flex-direction: row;
   align-items: flex-start; }
 
 #addPlayerHeaderLeft {
   width: 40%;
-  height: 100%; }
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
 
 #addPlayerHeaderRight {
   height: 100%;
@@ -57,12 +60,15 @@
 
 #chooseAgentContainer {
   width: 100%;
-  height: 230px;
+  height: 30%;
   display: flex; }
 
 #chooseAgentLeft {
   width: 40%;
-  height: 100%; }
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 #chooseAgentRight {
   width: 60%;
@@ -78,7 +84,6 @@
 #selectedAgent {
   border: 5px white solid;
   border-radius: 50%;
-  margin-left: 25%;
   width: 55%; }
 
 .agentOptions {
@@ -90,33 +95,77 @@
 
 #chooseRankContainer {
   width: 100%;
-  height: 230px;
+  height: 25%;
   display: flex; }
 
 #chooseRankLeft {
   width: 40%;
-  height: 100%; }
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 #chooseRankRight {
   width: 60%;
-  height: 100%; }
+  height: 100%;
+  display: flex;
+  align-items: flex-start; }
 
 .rankDropdown {
   color: white !important;
-  width: 200px;
+  width: 150px;
   margin: 5px 0 0 18px !important;
   font-family: "Oswald", sans-serif !important;
   font-weight: 500 !important; }
 
-#silvertry {
-  width: 80px; }
+.rankPreview {
+  width: 60px;
+  margin-top: 10px;
+  margin-left: 10px;
+  cursor: pointer; }
 
-#silverContainer {
+.rankColumn {
   display: flex;
   height: 80px;
   width: 150px;
   align-items: flex-start;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-direction: column; }
+
+#closeModalButton {
+  background-color: #de2a3f;
+  height: 50px;
+  width: 85%;
+  border: none;
+  color: white;
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  cursor: pointer; }
+  #closeModalButton:hover {
+    background-color: #a10b2e; }
+
+.rankImg {
+  width: 30%; }
+
+.modalWindow {
+  height: 100%; }
+
+#buttonDiv {
+  height: 15%;
+  width: 60%;
+  display: flex;
+  float: right;
+  align-items: flex-start;
+  margin-top: 3%; }
+
+#radiantRank {
+  margin-top: 15px; }
+
+h4 {
+  font-family: "Oswald", sans-serif !important;
+  color: white;
+  margin: 0 0 0 15px !important;
+  font-weight: 500 !important;
+  cursor: pointer; }
 
 /*# sourceMappingURL=ModalContent.css.map */

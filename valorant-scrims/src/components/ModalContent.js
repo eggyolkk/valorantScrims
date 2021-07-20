@@ -27,24 +27,131 @@ class ModalContent extends Component {
       playerName: '',
       playerTag: '',
       agent: 'astra',
-      ranks: [
+      test: '',
+      rank: '',
+      ironRanks: [
+        {
+          key: 'Iron 1',
+          text: 'IRON I',
+          value: 'iron1',
+          image: {avatar: true, src: require('../images/iron1.png').default}
+        },
+        {
+          key: 'Iron 2',
+          text: 'IRON II',
+          value: 'iron2',
+          image: {avatar: true, src: require('../images/iron2.png').default}
+        },
+        {
+          key: 'Iron 3',
+          text: 'IRON III',
+          value: 'iron3',
+          image: {avatar: true, src: require('../images/iron3.png').default}
+        },
+      ],
+
+      bronzeRanks: [
+        {
+          key: 'Bronze 1',
+          text: 'BRONZE I',
+          value: 'bronze1',
+          image: {avatar: true, src: require('../images/bronze1.png').default}
+        },
+        {
+          key: 'Bronze 2',
+          text: 'BRONZE II',
+          value: 'bronze2',
+          image: {avatar: true, src: require('../images/bronze2.png').default}
+        },
+        {
+          key: 'Bronze 3',
+          text: 'BRONZE III',
+          value: 'bronze3',
+          image: {avatar: true, src: require('../images/bronze3.png').default}
+        }
+      ],
+
+      silverRanks: [
         {
           key: 'Silver 1',
           text: 'SILVER I',
-          value: 'Silver 1',
+          value: 'silver1',
           image: {avatar: true, src: require('../images/silver1.png').default}
         },
         {
           key: 'Silver 2',
           text: 'SILVER II',
-          value: 'Silver 2',
+          value: 'silver2',
           image: {avatar: true, src: require('../images/silver2.png').default}
         },
         {
           key: 'Silver 3',
           text: 'SILVER III',
-          value: 'Silver 3',
+          value: 'silver3',
           image: {avatar: true, src: require('../images/silver3.png').default}
+        }
+      ],
+
+      goldRanks: [
+        {
+          key: 'Gold 1',
+          text: 'GOLD I',
+          value: 'gold1',
+          image: {avatar: true, src: require('../images/gold1.png').default}
+        },
+        {
+          key: 'Gold 2',
+          text: 'GOLD II',
+          value: 'gold2',
+          image: {avatar: true, src: require('../images/gold2.png').default}
+        },
+        {
+          key: 'Gold 3',
+          text: 'GOLD III',
+          value: 'gold3',
+          image: {avatar: true, src: require('../images/gold3.png').default}
+        }
+      ],
+
+      platinumRanks: [
+        {
+          key: 'Platinum 1',
+          text: 'PLATINUM I',
+          value: 'plat1',
+          image: {avatar: true, src: require('../images/plat1.png').default}
+        },
+        {
+          key: 'Platinum 2',
+          text: 'PLATINUM II',
+          value: 'plat2',
+          image: {avatar: true, src: require('../images/plat2.png').default}
+        },
+        {
+          key: 'Platinum 3',
+          text: 'PLATINUM III',
+          value: 'plat3',
+          image: {avatar: true, src: require('../images/plat3.png').default}
+        }
+      ],
+
+      diamondRanks: [
+        {
+          key: 'Diamond 1',
+          text: 'DIAMOND I',
+          value: 'diamond1',
+          image: {avatar: true, src: require('../images/diamond1.png').default}
+        },
+        {
+          key: 'Diamond 2',
+          text: 'DIAMOND II',
+          value: 'diamond2',
+          image: {avatar: true, src: require('../images/diamond2.png').default}
+        },
+        {
+          key: 'Diamond 3',
+          text: 'DIAMOND III',
+          value: 'diamond3',
+          image: {avatar: true, src: require('../images/diamond3.png').default}
         }
       ]
     }
@@ -73,11 +180,17 @@ class ModalContent extends Component {
     this.props.setPlayerDetails(this.state.playerName, this.state.playerTag, this.state.agent)
   }
 
+  setRank = rank => {
+    this.setState({
+      rank: rank,
+    })
+  }
+
   render() {
     const agent = require(`../images/${this.state.agent}.png`).default;
 
     return (
-      <React.Fragment>
+      <div className="modalWindow">
         <div id="addPlayerHeader">
           <div id="addPlayerHeaderLeft">
             <h1 id="addPlayerh1">ADD PLAYER</h1>
@@ -134,32 +247,123 @@ class ModalContent extends Component {
 
         <div id="chooseRankContainer">
           <div id="chooseRankLeft">
-            <img src={require(`../images/gold1.png`).default} alt='Player Card'/>
+              {this.state.rank !== '' ? (
+                  <img className="rankImg" src={require(`../images/${this.state.rank}.png`).default} alt='Player Rank'/>
+              ) : <img className="rankImg" src={require(`../images/iron1.png`).default} alt='Player Rank'/>
+            }
           </div>
 
           <div id="chooseRankRight">
-          <div id="silverContainer">
-            <img src={require(`../images/silver1.png`).default} alt="Silver" id="silvertry" />
+            <div className="rankColumn">
+              <img src={require(`../images/iron1.png`).default} alt="Iron" className="rankPreview" onClick={(e) => this.setRank('iron1')}/>
               <Dropdown
-                text='SILVER'
-                floating
-                labeled
-                button
-                src={require(`../images/silver1.png`).default}
-                className="rankDropdown"
-              >
-              <Dropdown.Menu>
-                {this.state.ranks.map((option) => (
-                  <Dropdown.Item key={option.value} {...option} />
-                ))}
-              </Dropdown.Menu>
-            </Dropdown>
+                  text='IRON'
+                  floating
+                  labeled
+                  button
+                  className="rankDropdown"
+                >
+                <Dropdown.Menu>
+                  {this.state.ironRanks.map((option) => (
+                    <Dropdown.Item key={option.value} {...option} onClick={(e) => this.setRank(option.value)}/>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+
+              <img src={require(`../images/bronze1.png`).default} alt="Bronze" className="rankPreview" onClick={(e) => this.setRank('bronze1')}/>
+              <Dropdown
+                  text='BRONZE'
+                  floating
+                  labeled
+                  button
+                  className="rankDropdown"
+                >
+                <Dropdown.Menu>
+                  {this.state.bronzeRanks.map((option) => (
+                    <Dropdown.Item key={option.value} {...option} onClick={(e) => this.setRank(option.value)}/>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+            </div>
+
+            <div className="rankColumn">
+              <img src={require(`../images/silver1.png`).default} alt="Silver" className="rankPreview" onClick={(e) => this.setRank('silver1')}/>
+              <Dropdown
+                  text='SILVER'
+                  floating
+                  labeled
+                  button
+                  className="rankDropdown"
+                >
+                <Dropdown.Menu>
+                  {this.state.silverRanks.map((option) => (
+                    <Dropdown.Item key={option.value} {...option} onClick={(e) => this.setRank(option.value)}/>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+
+              <img src={require(`../images/gold1.png`).default} alt="Gold" className="rankPreview" onClick={(e) => this.setRank('gold1')}/>
+              <Dropdown
+                  text='GOLD'
+                  floating
+                  labeled
+                  button
+                  className="rankDropdown"
+                >
+                <Dropdown.Menu>
+                  {this.state.goldRanks.map((option) => (
+                    <Dropdown.Item key={option.value} {...option} onClick={(e) => this.setRank(option.value)}/>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+            </div>
+
+            <div className="rankColumn">
+              <img src={require(`../images/plat1.png`).default} alt="Platinum" className="rankPreview" onClick={(e) => this.setRank('plat1')}/>
+              <Dropdown
+                  text='PLATINUM'
+                  floating
+                  labeled
+                  button
+                  className="rankDropdown"
+                >
+                <Dropdown.Menu>
+                  {this.state.platinumRanks.map((option) => (
+                    <Dropdown.Item key={option.value} {...option} onClick={(e) => this.setRank(option.value)}/>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+
+              <img src={require(`../images/diamond1.png`).default} alt="Diamond" className="rankPreview" onClick={(e) => this.setRank('diamond1')}/>
+              <Dropdown
+                  text='DIAMOND'
+                  floating
+                  labeled
+                  button
+                  className="rankDropdown"
+                >
+                <Dropdown.Menu>
+                  {this.state.diamondRanks.map((option) => (
+                    <Dropdown.Item key={option.value} {...option} onClick={(e) => this.setRank(option.value)}/>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+            </div>
+
+            <div className="rankColumn">
+              <img src={require(`../images/immortal.png`).default} alt="Immortal" className="rankPreview" onClick={(e) => this.setRank('immortal')}/>
+              <h4 onClick={(e) => this.setRank('immortal')}>IMMORTAL</h4>
+
+              <img src={require(`../images/radiant.png`).default} id="radiantRank" alt="Radiant" className="rankPreview" onClick={(e) => this.setRank('radiant')}/>
+              <h4 onClick={(e) => this.setRank('radiant')}>RADIANT</h4>
             </div>
           </div>
         </div>
 
-        <button id="closeModalButton" onClick={this.submit}>ADD PLAYER</button>
-      </React.Fragment>
+        <div id="buttonDiv">
+          <button id="closeModalButton" onClick={this.submit}>ADD PLAYER</button>
+        </div>
+      </div>
     )
   }
 }
