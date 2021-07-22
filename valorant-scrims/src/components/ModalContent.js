@@ -194,7 +194,11 @@ class ModalContent extends Component {
         <div id="addPlayerHeader">
           <div id="addPlayerHeaderLeft">
             <h1 id="addPlayerh1">ADD PLAYER</h1>
-            <h2 id="playerTypeh2">{this.props.playerType}</h2>
+            {this.props.playerType === 'ATTACKER' ?
+              <h2 id="attackerTypeh2">{this.props.playerType}</h2>
+             :
+              <h2 id="defenderTypeh2">{this.props.playerType}</h2>
+            }
           </div>
 
           <div id="addPlayerHeaderRight">
@@ -202,14 +206,14 @@ class ModalContent extends Component {
               id="playerNameInput"
               type='text'
               onChange={this.onChangePlayerName}
-              placeholder="PLAYER'S USERNAME"
+              placeholder="PLAYER USERNAME"
             ></input>
 
             <input
               id="playerTagInput"
               type='text'
               onChange={this.onChangePlayerTag}
-              placeholder="PLAYER'S TAG"
+              placeholder="PLAYER TAG"
             ></input>
           </div>
         </div>

@@ -4,8 +4,14 @@
   font-size: 350%;
   margin-bottom: 0; }
 
-#playerTypeh2 {
+#attackerTypeh2 {
   color: #de2a3f;
+  font-family: "Oswald", sans-serif;
+  font-size: 450%;
+  margin-top: -5px; }
+
+#defenderTypeh2 {
+  color: #63a4ff;
   font-family: "Oswald", sans-serif;
   font-size: 450%;
   margin-top: -5px; }

@@ -1,0 +1,60 @@
+$oswald: 'Oswald', sans-serif;
+$valoRed: #de2a3f;
+$valoBlue: #63a4ff;
+
+#addMapContainer{
+	height: 1400px;
+	text-align: center;
+	background-color: #1c1c29;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#topRowMaps {
+	margin-top: 50px;
+}
+
+#bottomRowMaps {
+	padding-top: 10px;
+}
+
+#selectedMap {
+	width: 1210px;
+	margin-top: 100px;
+	border: 5px white solid;
+}
+
+.mapPreview {
+	width: 200px;
+	margin-right: 5px;
+	cursor: pointer;
+	&:hover {
+		border: 2px white solid;
+	}
+}
+
+#addMatchButton {
+    background-color: #de2a3f;
+    height: 80px;
+    width: 580px;
+    border: none;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+    	background-color: #a10b2e;
+    }
+}
+
+#buttonOutline {
+    border: 2px white solid;
+    height: 100px;
+    margin-top: 100px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+}

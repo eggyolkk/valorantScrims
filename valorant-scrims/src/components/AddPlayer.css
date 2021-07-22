@@ -6,7 +6,8 @@
     opacity: 1;
     transform: translate3d(0, 0, 0); } }
 .addPlayerContainer {
-  text-align: center; }
+  text-align: center;
+  height: 1500px; }
 
 #playerh1 {
   color: white;
@@ -256,9 +257,6 @@
 
 .modal:focus-visible {
   border: none; }
-
-#closeModalButton {
-  float: right; }
 
 .playerDetails {
   color: white;
