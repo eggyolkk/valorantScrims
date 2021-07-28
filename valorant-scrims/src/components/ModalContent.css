@@ -125,7 +125,7 @@
   font-weight: 500 !important; }
 
 .rankPreview {
-  width: 60px;
+  width: 40%;
   margin-top: 10px;
   margin-left: 10px;
   cursor: pointer; }
@@ -133,7 +133,7 @@
 .rankColumn {
   display: flex;
   height: 80px;
-  width: 150px;
+  width: 25%;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column; }

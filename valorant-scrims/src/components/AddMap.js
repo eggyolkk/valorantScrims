@@ -13,7 +13,7 @@ class AddMap extends Component {
     super(props)
 
     this.state = {
-      map: ''
+      map: 'ascent'
     }
   }
 
@@ -23,12 +23,18 @@ class AddMap extends Component {
     })
   }
 
+  addMatch = e => {
+    this.props.setPage()
+  }
+
   render() {
+    const map = require(`../images/${this.state.map}.png`).default;
+
     return (
       <div id="addMapContainer">
         <h1 id="playerh1">MAP DETAILS</h1>
 
-        <img src={ascent} alt='Ascent' id="selectedMap"/>
+        <img src={map} alt='Ascent' id="selectedMap"/>
 
         <div id="topRowMaps">
           <img src={ascent} alt='Ascent' className="mapPreview" onClick={this.selectMap} value='ascent' />
@@ -42,9 +48,10 @@ class AddMap extends Component {
         <div id="bottomRowMaps">
         </div>
 
+
         <div id="buttonOutline">
           <div>
-            <button id="addMatchButton">ADD MATCH</button>
+            <button id="addMatchButton" onClick={this.addMatch}>ADD MATCH</button>
           </div>
 
         </div>

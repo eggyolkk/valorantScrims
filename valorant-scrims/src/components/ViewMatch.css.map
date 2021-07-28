@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,WAAY;EACX,WAAW,EAAE,+BAAkB;EAC/B,KAAK,EAAE,gBAAgB;EACvB,SAAS,EAAE,eAAe;;AAG3B,mBAAoB;EACnB,UAAU,EAAE,KAAK",
+"sources": ["ViewMatch.scss"],
+"names": [],
+"file": "ViewMatch.css"
+}

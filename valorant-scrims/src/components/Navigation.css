@@ -14,7 +14,8 @@
   font-size: 130%;
   font-family: "Oswald", sans-serif;
   font-weight: 500;
-  cursor: pointer; }
+  cursor: pointer;
+  margin-bottom: 15px !important; }
 
 .navOption:hover {
   color: #de2a3f; }
